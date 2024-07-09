@@ -4,7 +4,7 @@ Section: Tweaks
 Maintainer: angelXwind (example@example.com)
 Depends: firmware (>5.0, 14.0<), mobilesubstrate
 Architecture: iphoneos-arm
-Filename: ./debs/net.angelxwind.appsyncunified_102.0.deb
+Filename: debs/net.angelxwind.appsyncunified_102.0.deb
 Size: 58304
 MD5sum: bfc0ae0a9d103360e8d798d5a04b9620
 Description: Allows you to install unsigned iOS apps!
@@ -18,7 +18,7 @@ Section: Tweaks
 Maintainer: linusyang (example@example.com)
 Depends: firmware (>6.0, 12.0<), mobilesubstrate
 Architecture: iphoneos-arm
-Filename: ./debs/com.linusyang.appsyncnew_1.4.deb
+Filename: debs/com.linusyang.appsyncnew_1.4.deb
 Size: 6436
 MD5sum: b4f4fc9eb7f8e7e5c0dd8b6d3a7d3b49
 Description: Allows you to install unsigned iOS apps!
