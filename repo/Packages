@@ -28,7 +28,7 @@ Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.linusyang.appsy
 
 Package: org.mr.filza
 Version: 3.8.0
-Section: File
+Section: Data Storage
 Maintainer: TIGI Software (example@example.com)
 Depends: firmware (>7.0, 14.0<), mobilesubstrate
 Architecture: iphoneos-arm
@@ -42,7 +42,7 @@ Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=org.mr.filza
 
 Package: ru.rejail.icleanerpro
 Version: 7.9.1
-Section: Tweaks
+Section: Utilities
 Maintainer: Ivano Bilenchi (example@example.com)
 Depends: firmware (>4.0, 14.0<), mobilesubstrate
 Architecture: iphoneos-arm
@@ -112,7 +112,7 @@ Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.cokepokes.appst
 
 Package: en.heinelt.ifile
 Version: 2.2.0-1
-Section: File
+Section: Data Storage
 Maintainer: Carsten Heinelt (example@example.com)
 Depends: firmware (>3.0, 9.0<), mobilesubstrate
 Architecture: iphoneos-arm
@@ -126,7 +126,7 @@ Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=en.heinelt.ifile
 
 Package: net.angelxwind.mobileterminal-applesdk
 Version: 1.0
-Section: Terminal
+Section: Terminal Support
 Maintainer: angelXwind, AppleSDK (example@example.com)
 Depends: firmware (>1.0, 18.0<), mobilesubstrate
 Architecture: iphoneos-arm
