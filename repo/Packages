@@ -28,7 +28,7 @@ Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.linusyang.appsy
 
 Package: org.mr.filza
 Version: 3.8.0
-Section: Files
+Section: File
 Maintainer: TIGI Software (example@example.com)
 Depends: firmware (>7.0, 14.0<), mobilesubstrate
 Architecture: iphoneos-arm
@@ -109,3 +109,31 @@ Description: Downgrade, block updates and other in AppStore!
 Name: AppStore++
 Author: CokePokes <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.cokepokes.appstoreplusplus
+
+Package: en.heinelt.ifile
+Version: 2.2.0-1
+Section: File
+Maintainer: Carsten Heinelt (example@example.com)
+Depends: firmware (>3.0, 9.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/eu.heinelt.ifile_2.2.0-1_iphoneos-arm.deb
+Size: 9751882
+MD5sum: d41d8cd98f00b204e9800998ecf8427e
+Description: Manage your files on your iDevice!
+Name: iFile
+Author: Carsten Heinelt <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=en.heinelt.ifile
+
+Package: net.angelxwind.mobileterminal-applesdk
+Version: 1.0
+Section: Terminal
+Maintainer: angelXwind, AppleSDK (example@example.com)
+Depends: firmware (>1.0, 18.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/net.angelxwind.mobileterminal-applesdk.deb
+Size: 245120
+MD5sum: 76df0ca531e0c3c158eed21ebf5ece52
+Description: Command Promt for your device!
+Name: MobileTerminal
+Author: angelXwind, AppleSDK <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=net.angelxwind.mobileterminal-applesdk
