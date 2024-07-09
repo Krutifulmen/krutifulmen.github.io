@@ -81,3 +81,31 @@ Description: Activate your Yellow led!
 Name: Amber
 Author: PoomSmart <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=re.rejail.amber
+
+Package: com.julioverne.cydown
+Version: 7.1.1
+Section: Tweaks
+Maintainer: Julioverne (example@example.com)
+Depends: firmware (>6.0, 13.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/com.julioverne.cydown_7.1.1.deb
+Size: 4358056
+MD5sum: cd0eb2e0a8ebbd2f6a052fa596f03a89
+Description: Woo, paid tweaks is now free!
+Name: CyDown
+Author: Julioverne <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.julioverne.cydown
+
+Package: com.cokepokes.appstoreplusplus
+Version: 0.9.16-2
+Section: Tweaks
+Maintainer: CokePokes (example@example.com)
+Depends: firmware (>11.0, 14.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/com.cokepokes.appstoreplusplus_0.9.16-2.deb
+Size: 3024992
+MD5sum: e953eed8ca5b093477ba291a16c96d9e
+Description: Downgrade, block updates and other in AppStore!
+Name: AppStore++
+Author: CokePokes <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.cokepokes.appstoreplusplus
