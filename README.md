@@ -1,7 +1,6 @@
 # Krutifulmen's Site
 
-# What in repo:
-* Jailbreak repo:
+# Jailbreak repo:
   1. App Sync Unifed/New
   2. Filza
   3. iFile
