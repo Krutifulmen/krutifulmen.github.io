@@ -5,7 +5,7 @@
   2. Filza
   3. iFile
   4. iClenaer Pro
-  5. Springtomize
+  5. Springtomize (All version)
   6. CyDown
   7. Amber
   8. AppStore++
