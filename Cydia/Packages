@@ -5,7 +5,7 @@ Maintainer: angelXwind (example@example.com)
 Depends: firmware (>5.0), mobilesubstrate
 Architecture: iphoneos-arm
 Filename: ./debs/net.angelxwind.appsyncunified_102.0.deb
-Size: 58304
+Size: 56940
 MD5sum: bfc0ae0a9d103360e8d798d5a04b9620
 Description: Allows you to install unsigned iOS apps!
 Name: App Sync Unifed
