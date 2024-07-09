@@ -25,3 +25,31 @@ Description: Allows you to install unsigned iOS apps!
 Name: App Sync New
 Author: Linus Yang <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.linusyang.appsyncnew
+
+Package: org.mr.filza
+Version: 3.8.0
+Section: Files
+Maintainer: TIGI Software (example@example.com)
+Depends: firmware (>7.0, 14.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/org.mr.filza_3.8.0-20k.deb
+Size: 12899762
+MD5sum: 847404d9a142b2d1abe63f0ce23e5801
+Description: File Manager to manage your files on your iDevice!
+Name: Filza
+Author: TIGI Software <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=org.mr.filza
+
+Package: ru.rejail.icleanerpro
+Version: 7.9.1
+Section: Tweaks
+Maintainer: Ivano Bilenchi (example@example.com)
+Depends: firmware (>4.0, 14.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/ru.rejail.icleanerpro_7.9.1.deb
+Size: 4817410
+MD5sum: 4f790815b040a7d1ec75c6a3b01dd774
+Description: First Clenaer for your iDevice!
+Name: iCleaner
+Author: Ivano Bilenchi <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=ru.rejail.icleanerpro
