@@ -2,7 +2,7 @@ Package: net.angelxwind.appsyncunified
 Version: 102.0
 Section: Tweaks
 Maintainer: angelXwind (example@example.com)
-Depends: firmware (>5.0, 14<), mobilesubstrate
+Depends: firmware (>5.0), mobilesubstrate
 Architecture: iphoneos-arm
 Filename: ./debs/net.angelxwind.appsyncunified_102.0.deb
 Size: 56940
