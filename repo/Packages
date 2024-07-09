@@ -53,3 +53,31 @@ Description: First Clenaer for your iDevice!
 Name: iCleaner
 Author: Ivano Bilenchi <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=ru.rejail.icleanerpro
+
+Package: org.mr.new
+Version: 4.1.0
+Section: Tweaks
+Maintainer: sharedRoutine (example@example.com)
+Depends: firmware (>10.0, 12.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/org.mr.new_4.1.0.deb
+Size: 550528
+MD5sum: 9fca9ab3eb860511867f258778b5765f
+Description: Customize your iDevice, how you can!
+Name: Springtomize 4 (iOS 10-12)
+Author: sharedRoutine <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=org.mr.new
+
+Package: ru.rejail.amber
+Version: 0.0.3.4
+Section: Tweaks
+Maintainer: PoomSmart (example@example.com)
+Depends: firmware (>7.0, 13.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/ru.rejail.amber_0.0.3.4_iphoneos-arm.deb
+Size: 29852
+MD5sum: f5890d2f358a0855cef439b25d31b26a
+Description: Activate your Yellow led!
+Name: Amber
+Author: PoomSmart <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=re.rejail.amber
