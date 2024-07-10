@@ -1,6 +1,6 @@
 Package: net.angelxwind.appsyncunified
 Version: 102.0
-Section: Tweaks
+Section: System
 Maintainer: angelXwind (example@example.com)
 Depends: firmware (>5.0, 14.0<), mobilesubstrate
 Architecture: iphoneos-arm
@@ -14,7 +14,7 @@ Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=net.angelxwind.apps
 
 Package: com.kinusyang.appsyncnew
 Version: 1.4
-Section: Tweaks
+Section: System
 Maintainer: linusyang (example@example.com)
 Depends: firmware (>6.0, 12.0<), mobilesubstrate
 Architecture: iphoneos-arm
@@ -56,7 +56,7 @@ Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=ru.rejail.icleanerp
 
 Package: org.mr.new
 Version: 4.1.0
-Section: Tweaks
+Section: Addons
 Maintainer: sharedRoutine (example@example.com)
 Depends: firmware (>10.0, 12.0<), mobilesubstrate
 Architecture: iphoneos-arm
@@ -67,6 +67,34 @@ Description: Customize your iDevice, how you can!
 Name: Springtomize 4 (iOS 10-12)
 Author: sharedRoutine <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=org.mr.new
+
+Package: com.filippobiga.springtomize
+Version: 1.5.7
+Section: Addons
+Maintainer: sharedRoutine (example@example.com)
+Depends: firmware (4), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/com.filippobiga.springtomize_1.5-7_iphoneos-arm.deb
+Size: 955690
+MD5sum: 6a63f8d13bc47dfad1451371d22fa59f
+Description: Customize your iDevice, how you can!
+Name: Springtomize 1 (iOS 4)
+Author: sharedRoutine <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.filippobiga.springtomize
+
+Package: com.hackyouriphone.springtomize2
+Version: 1.4.5-1
+Section: Addons
+Maintainer: sharedRoutine (example@example.com)
+Depends: firmware (>5, <6), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/com.hackyouriphone.springtomize2_1.4.5-1.deb
+Size: 251858
+MD5sum: d41d8cd98f00b204e9800998ecf8427e
+Description: Customize your iDevice, how you can!
+Name: Springtomize 1 (iOS 5-6)
+Author: sharedRoutine <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.filippobiga.springtomize
 
 Package: ru.rejail.amber
 Version: 0.0.3.4
