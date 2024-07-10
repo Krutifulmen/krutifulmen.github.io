@@ -132,7 +132,7 @@ Depends: firmware (>7.0, 13.0<), mobilesubstrate
 Architecture: iphoneos-arm
 Filename: ./debs/ru.rejail.amber_0.0.3.4_iphoneos-arm.deb
 Size: 29852
-MD5sum: f5890d2f358a0855cef439b25d31b26a
+MD5sum: 6ae5502ce17ad90f89687c245e8b78ab
 Description: Activate your Yellow led!
 Name: Amber
 Author: PoomSmart <example@example.com>
