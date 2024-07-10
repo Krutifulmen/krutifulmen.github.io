@@ -221,3 +221,17 @@ Description: Change the number of your battery!
 Name: ColorMyBattery
 Author: P2KDev <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.imkpatil.colormybattery
+
+Package: libactivator
+Version: 1.4.1
+Section: System
+Maintainer: Rob311 (example@example.com)
+Depends: firmware (>4.0, 13.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/
+Size: 930776
+MD5sum: 3284dc032c096bc82c0fb4fa465a0386
+Description: Gestures, button and shortcut managment for iOS!
+Name: Activator
+Author: Ryan Petrich <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=libactivator
