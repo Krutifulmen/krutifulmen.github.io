@@ -86,15 +86,43 @@ Package: com.hackyouriphone.springtomize2
 Version: 1.4.5-1
 Section: Addons
 Maintainer: sharedRoutine (example@example.com)
-Depends: firmware (>5, <6), mobilesubstrate
+Depends: firmware (>5, 6<), mobilesubstrate
 Architecture: iphoneos-arm
 Filename: ./debs/com.hackyouriphone.springtomize2_1.4.5-1.deb
 Size: 251858
 MD5sum: d41d8cd98f00b204e9800998ecf8427e
 Description: Customize your iDevice, how you can!
-Name: Springtomize 1 (iOS 5-6)
+Name: Springtomize 2 (iOS 5-6)
 Author: sharedRoutine <example@example.com>
-Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.filippobiga.springtomize
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.hackyouriphone.springtomize2
+
+Package: com.hackyouriphone.springtomize3
+Version: 1.4.5-1
+Section: Addons
+Maintainer: sharedRoutine (example@example.com)
+Depends: firmware (>7, 9<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/com.hackyouriphone.springtomize3_1.4.5-1.deb
+Size: 517272
+MD5sum: d41d8cd98f00b204e9800998ecf8427e
+Description: Customize your iDevice, how you can!
+Name: Springtomize 3 (iOS 7-9)
+Author: sharedRoutine <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=com.hackyouriphone.springtomize3
+
+Package: org.mr.st5
+Version: 5.1.9
+Section: Addons
+Maintainer: sharedRoutine (example@example.com)
+Depends: firmware (13), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/org.mr.st5_5.1.9.deb
+Size: 466620
+MD5sum: 2e52cb5d70e87d13a5453d7b807777c2
+Description: Customize your iDevice, how you can!
+Name: Springtomize 5 (iOS 13)
+Author: sharedRoutine <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=org.mr.st5
 
 Package: ru.rejail.amber
 Version: 0.0.3.4
