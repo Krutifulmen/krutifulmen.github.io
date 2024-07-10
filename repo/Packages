@@ -235,3 +235,31 @@ Description: Gestures, button and shortcut managment for iOS!
 Name: Activator
 Author: Ryan Petrich <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=libactivator
+
+Package: ws.hbang.newterm2
+Version: 2.5
+Section: Terminal Support
+Maintainer: HASHBANG Productions (example@example.com)
+Depends: firmware (>10.0, 14.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/ws.hbang.newterm2_2.5.deb
+Size: 2017880
+MD5sum: edfc0edf0e2080c1f7e3f762c19fb23e
+Description: Command Promt for your device!
+Name: NewTerm 2 (iOS 10-14)
+Author: HASHBANG Productions <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=ws.hbang.newterm2
+
+Package: ws.hbang.newterm2
+Version: 2.1
+Section: Terminal Support
+Maintainer: HASHBANG Productions (example@example.com)
+Depends: firmware (>7.0, 12.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/ws.hbang.newterm2_2.1_iphoneos-arm.deb
+Size: 746092
+MD5sum: 05e23fb7e8d8762853eeb9c7f3c1b5b8
+Description: Command Promt for your device!
+Name: NewTerm 2 (iOS 7-12)
+Author: HASHBANG Productions <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=ws.hbang.newterm2
