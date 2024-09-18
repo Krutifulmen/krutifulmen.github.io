@@ -263,3 +263,17 @@ Description: Command Promt for your device!
 Name: NewTerm 2 (iOS 7-12)
 Author: HASHBANG Productions <example@example.com>
 Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=ws.hbang.newterm2
+
+Package: com.opa334.trollstorehelper
+Version: 2.0.12
+Section: Sysstem
+Maintainer: opa334 (example@example.com)
+Depends: firmware (>7.0, 12.0<), mobilesubstrate
+Architecture: iphoneos-arm
+Filename: ./debs/com.opa334.trollstorehelper_2.0.12_iphoneos-arm.deb
+Size: 746092
+MD5sum: 05e23fb7e8d8762853eeb9c7f3c1b5b8
+Description: Command Promt for your device!
+Name: NewTerm 2 (iOS 7-12)
+Author: HASHBANG Productions <example@example.com>
+Depiction: https://krutifulmen.github.io/Cydia/depictions/?p=ws.hbang.newterm2
