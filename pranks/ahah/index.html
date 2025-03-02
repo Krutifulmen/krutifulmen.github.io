@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Click Sound</title>
+    <title>Sound + Text</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -19,54 +19,31 @@
             font-family: Arial, sans-serif;
             font-size: 24px;
             user-select: none;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="text" id="statusText">нажми на меня :)</div>
+    <div class="text" id="mainText">нажми на меня :)</div>
 
     <script>
         const audio = new Audio('sound.mp3');
-        let isLooping = false;
-        const statusText = document.getElementById('statusText');
+        const mainText = document.getElementById('mainText');
+        let isFirstClick = true;
 
-        // Функция для обновления текста
-        function updateText() {
-            statusText.textContent = isLooping ? "нажми чтобы остановить" : "нажми чтобы начать";
-        }
-
-        // Обработчик клика
         document.addEventListener('click', () => {
-            if (!isLooping) {
-                // Начать воспроизведение
-                isLooping = true;
-                audio.loop = false; // Отключаем стандартный loop
+            if (isFirstClick) {
+                // Запускаем бесконечное воспроизведение
+                audio.loop = true;
+                audio.play().catch(error => {
+                    console.error('Ошибка воспроизведения:', error);
+                });
                 
-                const playLoop = () => {
-                    audio.currentTime = 0;
-                    audio.play()
-                        .catch(error => console.error('Ошибка:', error));
-                };
-
-                audio.onended = () => {
-                    if (isLooping) {
-                        playLoop();
-                    }
-                };
-
-                playLoop();
-            } else {
-                // Остановить воспроизведение
-                isLooping = false;
-                audio.pause();
-                audio.currentTime = 0;
+                // Меняем текст
+                mainText.textContent = "введите текст";
+                isFirstClick = false;
             }
-            
-            updateText();
         });
-
-        // Инициализация текста
-        updateText();
     </script>
 </body>
 </html>
