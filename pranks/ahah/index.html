@@ -23,31 +23,50 @@
     </style>
 </head>
 <body>
-    <div class="text">нажми на меня :)</div>
+    <div class="text" id="statusText">нажми чтобы начать</div>
 
     <script>
         const audio = new Audio('sound.mp3');
-        audio.preload = 'auto';
-        let isPlaying = false;
+        let isLooping = false;
+        const statusText = document.getElementById('statusText');
 
+        // Функция для обновления текста
+        function updateText() {
+            statusText.textContent = isLooping ? "нажми чтобы остановить" : "нажми чтобы начать";
+        }
+
+        // Обработчик клика
         document.addEventListener('click', () => {
-            if (!isPlaying) {
-                isPlaying = true;
+            if (!isLooping) {
+                // Начать воспроизведение
+                isLooping = true;
+                audio.loop = false; // Отключаем стандартный loop
+                
+                const playLoop = () => {
+                    audio.currentTime = 0;
+                    audio.play()
+                        .catch(error => console.error('Ошибка:', error));
+                };
+
+                audio.onended = () => {
+                    if (isLooping) {
+                        playLoop();
+                    }
+                };
+
+                playLoop();
+            } else {
+                // Остановить воспроизведение
+                isLooping = false;
+                audio.pause();
                 audio.currentTime = 0;
-                audio.play()
-                    .then(() => {
-                        // Звук начал воспроизводиться
-                    })
-                    .catch(error => {
-                        console.error('Ошибка воспроизведения:', error);
-                        isPlaying = false;
-                    })
-                    .finally(() => {
-                        // Сброс флага после окончания воспроизведения
-                        audio.onended = () => isPlaying = false;
-                    });
             }
+            
+            updateText();
         });
+
+        // Инициализация текста
+        updateText();
     </script>
 </body>
-  </html>
+</html>
