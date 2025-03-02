@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Sound</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .text {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">нажми на меня :)</div>
+
+    <script>
+        const audio = new Audio('sound.mp3');
+        audio.preload = 'auto';
+        let isPlaying = false;
+
+        document.addEventListener('click', () => {
+            if (!isPlaying) {
+                isPlaying = true;
+                audio.currentTime = 0;
+                audio.play()
+                    .then(() => {
+                        // Звук начал воспроизводиться
+                    })
+                    .catch(error => {
+                        console.error('Ошибка воспроизведения:', error);
+                        isPlaying = false;
+                    })
+                    .finally(() => {
+                        // Сброс флага после окончания воспроизведения
+                        audio.onended = () => isPlaying = false;
+                    });
+            }
+        });
+    </script>
+</body>
+  </html>
