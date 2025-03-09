@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AvocadoGPT</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        #header-left span {
+            font-size: 1.5em;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        #theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        #chat-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chat-box {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        #welcome-message {
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+            margin-top: 50px;
+            background: linear-gradient(90deg, #6200EE, #3700B3, #00BCD4, #009688, #4CAF50, #FFEB3B, #FF9800, #F44336);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 10s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        #input-container {
+            display: flex;
+            padding: 10px 20px;
+            background: #fff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #send {
+            background: #6200EE;
+            color: #fff;
+            border: none;
+            padding: 12px 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+        }
+
+        .user, .vision {
+            padding: 12px 20px;
+            margin: 8px 0;
+            border-radius: 20px;
+            max-width: 80%;
+            align-self: flex-start;
+            background: #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .vision {
+            align-self: flex-end;
+            background: #6200EE;
+            color: #fff;
+        }
+
+        body.dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode #header,
+        body.dark-mode #input-container {
+            background: #1e1e1e;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode #input {
+            background: #1e1e1e;
+            color: #e0e0e0;
+            border-color: #5c5c5c;
+        }
+
+        body.dark-mode .user,
+        body.dark-mode .vision {
+            background: #373737;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode .vision {
+            background: #BB86FC;
+        }
+
+        #menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        #menu.open {
+            transform: translateX(0);
+        }
+
+        #menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #menu-header button {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        #menu-header span {
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        #menu-content {
+            margin-top: 20px;
+        }
+
+        #menu-content p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        #menu-toggle {
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div id="header-left">
+            <span>AvocadoGPT</span>
+            <button id="menu-toggle">☰</button>
+        </div>
+        <button id="theme-toggle">🌙</button>
+    </div>
+
+    <div id="menu">
+        <div id="menu-header">
+            <button id="close-menu">✖</button>
+            <span>AvocadoGPT by AvocadoTech</span>
+        </div>
+        <div id="menu-content">
+            <p><strong>Чтобы начать новый чат с Vision, перезагрзите страницу</strong></p>
+        </div>
+    </div>
+
+    <div id="chat-container">
+        <div id="chat-box">
+            <div id="welcome-message">Привет! Чем могу помочь?</div>
+        </div>
+        <div id="input-container">
+            <input type="text" id="input" placeholder="Спросить AvocadoGPT">
+            <button id="send">➤</button>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = "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"; 
+        const apiUrl = "https://openrouter.ai/api/v1/chat/completions";
+        const referer = "YOUR_SITE_URL"; 
+        const title = "AvocadoGPT";
+
+        const themeToggle = document.getElementById("theme-toggle");
+        const menuToggle = document.getElementById("menu-toggle");
+        const closeMenu = document.getElementById("close-menu");
+        const menu = document.getElementById("menu");
+        const body = document.body;
+        const chatBox = document.getElementById("chat-box");
+        const inputField = document.getElementById("input");
+        const sendButton = document.getElementById("send");
+        const welcomeMessage = document.getElementById("welcome-message");
+
+        let isDarkMode = false;
+
+        themeToggle.addEventListener("click", () => {
+            isDarkMode = !isDarkMode;
+            if (isDarkMode) {
+                body.classList.add("dark-mode");
+            } else {
+                body.classList.remove("dark-mode");
+            }
+        });
+
+        menuToggle.addEventListener("click", () => {
+            menu.classList.add("open");
+        });
+
+        closeMenu.addEventListener("click", () => {
+            menu.classList.remove("open");
+        });
+
+        sendButton.addEventListener("click", sendMessage);
+
+        function sendMessage() {
+            const message = inputField.value.trim();
+            if (message) {
+                addMessage("Вы: " + message, "user");
+                inputField.value = '';
+                welcomeMessage.style.display = "none"; // Скрыть приветственное сообщение
+
+                const loadingMessage = document.createElement("div");
+                loadingMessage.classList.add("vision");
+                loadingMessage.textContent = "Загружается...";
+                chatBox.appendChild(loadingMessage);
+
+                fetch(apiUrl, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${apiKey}`,
+                        "HTTP-Referer": referer,
+                        "X-Title": title
+                    },
+                    body: JSON.stringify({
+                        model: "meta-llama/llama-3.3-70b-instruct:free",
+                        messages: [{ role: "user", content: message }],
+                        temperature: 0.7
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const responseMessage = document.createElement("div");
+                    responseMessage.classList.add("vision");
+                    responseMessage.textContent = data.choices[0].message.content;
+                    chatBox.appendChild(responseMessage);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                })
+                .catch(error => {
+                    console.error("Ошибка:", error);
+                    const errorMessage = document.createElement("div");
+                    errorMessage.classList.add("vision");
+                    errorMessage.textContent = "Ошибка при получении ответа от сервера.";
+                    chatBox.appendChild(errorMessage);
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                });
+            }
+        }
+
+        function addMessage(message, type) {
+            const msgElement = document.createElement("div");
+            msgElement.classList.add(type);
+            msgElement.textContent = message;
+            chatBox.appendChild(msgElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+</body>
+</html>
