@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>взлом жопы</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .fullscreen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            transition: opacity 1s ease;
+            z-index: 1000;
+        }
+
+        /* Класс для скрытия изображения */
+        .fade-out {
+            opacity: 0 !important;
+        }
+
+        /* Отключение скролла */
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://avatars.mds.yandex.net/i?id=8fb02560b6f555616d8bc1ffaefcc04a_l-5317467-images-thumbs&n=13" alt="Fullscreen Image" class="fullscreen-image" id="mainImage">
+    <script>
+        // Скроем изображение через 5 секунд
+        setTimeout(() => {
+            const image = document.getElementById('mainImage');
+            image.classList.add('fade-out');
+            
+            // Удалим изображение из DOM после анимации
+            setTimeout(() => {
+                image.remove();
+                // Восстановим скролл после удаления изображения
+                document.body.style.overflow = 'auto';
+            }, 1000); // Ждем завершения анимации
+        }, 5000);
+    </script>
+</body>
+</html>
