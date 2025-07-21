@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Executor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        textarea {
+            height: 200px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #output {
+            border: 1px solid #ddd;
+            padding: 10px;
+            min-height: 100px;
+            background-color: #f9f9f9;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Executor</h1>
+    <div class="container">
+        <textarea id="code" placeholder="Введите ваш JavaScript код здесь..."></textarea>
+        <button id="run">Выполнить код</button>
+        <h3>Результат:</h3>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        document.getElementById('run').addEventListener('click', function() {
+            const code = document.getElementById('code').value;
+            const output = document.getElementById('output');
+            
+            try {
+                // Сохраняем оригинальный console.log
+                const originalConsoleLog = console.log;
+                
+                // Перехватываем вывод в console.log
+                let logOutput = '';
+                console.log = function(message) {
+                    if (logOutput) logOutput += '\n';
+                    logOutput += message;
+                };
+                
+                // Выполняем код
+                const result = eval(code);
+                
+                // Восстанавливаем оригинальный console.log
+                console.log = originalConsoleLog;
+                
+                // Выводим результат
+                if (result !== undefined) {
+                    output.textContent = 'Результат: ' + result;
+                    if (logOutput) {
+                        output.textContent += '\n\nВывод console.log:\n' + logOutput;
+                    }
+                } else if (logOutput) {
+                    output.textContent = 'Вывод console.log:\n' + logOutput;
+                } else {
+                    output.textContent = 'Код выполнен, но не возвращает значения и не выводит ничего в консоль.';
+                }
+            } catch (error) {
+                output.textContent = 'Ошибка: ' + error.message;
+            }
+        });
+    </script>
+</body>
+</html>
